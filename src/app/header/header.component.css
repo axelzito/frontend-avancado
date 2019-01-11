@@ -1,0 +1,22 @@
+.logo{
+    font-size: 2.5rem;
+    color: white;
+    font-family: cursive;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.spacer{
+    flex: 1 1 auto;
+}
+
+.cart-icon{
+    font-size: 2rem;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.search-input{
+    width: 35rem;
+    height: 1.5rem;
+}
