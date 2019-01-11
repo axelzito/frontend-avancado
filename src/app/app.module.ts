@@ -1,25 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from "@angular/flex-layout";
 import { 
   MatButtonModule,
   MatToolbarModule,
   MatFormFieldModule,
   MatIconModule,
-  MatMenuModule
+  MatMenuModule,
+  MatGridListModule
 } from '@angular/material';
 
+import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { HeaderComponent } from './header/header.component';
     MatToolbarModule,
     MatFormFieldModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
