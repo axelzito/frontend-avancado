@@ -17,13 +17,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './product/product.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ProductComponent,
-    CarrinhoComponent
+    CarrinhoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
