@@ -1,4 +1,8 @@
 div {
     border: 1px solid #000;
-    height: 700px;
+    text-align: center;
+}
+
+.product-image{
+    max-width: 400px;
 }

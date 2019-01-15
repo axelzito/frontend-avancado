@@ -10,7 +10,8 @@ import {
   MatFormFieldModule,
   MatIconModule,
   MatMenuModule,
-  MatGridListModule
+  MatGridListModule,
+  MatCardModule,
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -37,7 +38,8 @@ import { HomeComponent } from './home/home.component';
     MatFormFieldModule,
     MatIconModule,
     MatMenuModule,
-    MatGridListModule
+    MatGridListModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

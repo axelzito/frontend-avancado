@@ -1,5 +1,5 @@
 .logo{
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: white;
     font-family: cursive;
     margin-left: 20px;
@@ -8,11 +8,13 @@
 
 .cart-icon{
     font-size: 2rem;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 .search-input{
-    width: 35rem;
+    width: 80%;
     height: 1.5rem;
+}
+
+.center{
+    text-align: center;
 }
