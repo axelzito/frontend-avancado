@@ -12,6 +12,8 @@ import {
   MatMenuModule,
   MatGridListModule,
   MatCardModule,
+  MatDividerModule,
+  MatListModule,
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -40,6 +42,8 @@ import { HomeComponent } from './home/home.component';
     MatMenuModule,
     MatGridListModule,
     MatCardModule,
+    MatDividerModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

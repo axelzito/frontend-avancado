@@ -1,14 +1,57 @@
 <div fxFlex="20"></div>
-<div fxFlex="60">
-    <div fxFlex="60" fxLayout="row" fxLayoutAlign="center center">
-        <img class="product-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+<div fxFlex="60" fxLayout="column" fxLayoutAlign="center stretch">
+  <div>
+    <div fxFlex="50" fxLayout="row" fxLayoutAlign="center center" class="div-image">
+        <img class="product-image" src="https://statics.livrariacultura.net.br/products/capas_lg/837/46055837.jpg">
     </div>
-    <div fxFlex="40" fxLayout="column" fxLayoutAlign="center stretch">
-      <div fxLayoutAlign="center center">Cachorro Amarelo do rabo empinado</div>
-      <div fxLayout="row" fxLayoutAlign="center center">
-        <div>preço</div>
-        <div>comprar</div>
+    <div fxFlex="50" fxLayout="column" fxLayoutAlign="center stretch">
+      <div class="div-product-title">
+        <span class="product-title">CRONICAS DE GELO E FOGO, AS, V.1 - A GUERRA DOS TRONOS - EDIÇAO COMEMORATIVA</span>
+        <br><br>
+        <span class="mini">Autor:</span>
+        <span class="author">&nbsp;MARTIN, GEORGE R .R.</span>
+      </div>
+      <mat-divider></mat-divider>
+      <div fxLayout="row" fxLayoutAlign="center center" class="div-product-title">
+        <div fxLayout="column" fxLayoutAlign="center stretch" class="div-product-price">
+          <div>
+            <span class="mini">de:&nbsp;</span>
+            <span class="original-price">R$&nbsp;149,90</span>
+          </div>
+          <div>
+            <span class="mini">por:&nbsp;</span>
+            <span class="price">R$&nbsp;129,90</span>
+          </div>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center stretch" class="div-product-price">
+          <button mat-flat-button color="primary">
+            <span>Adicionar ao meu carrinho&nbsp;&nbsp;</span>
+            <mat-icon>shopping_cart</mat-icon>
+          </button>
+        </div>
       </div>
     </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="div-product-details">
+    <span class="product-details-title">Detalhes do Produto</span>
+    <mat-list>
+      <mat-list-item>
+        <span class="product-details-cat">Autor:&nbsp;</span><span class="product-details">MARTIN, GEORGE R .R.</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span class="product-details-cat">Editora:&nbsp;</span><span class="product-details">LEYA CASA DA PALAVRA</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span class="product-details-cat">Assunto:&nbsp;</span><span class="product-details">FANTASIA</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span class="product-details-cat">Ano:&nbsp;</span><span class="product-details">2015</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span class="product-details-cat">Idioma:&nbsp;</span><span class="product-details">PORTUGUÊS</span>
+      </mat-list-item>
+    </mat-list>
+  </div>
 </div>
 <div fxFlex="20"></div>
