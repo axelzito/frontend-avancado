@@ -10,7 +10,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"65,50",
-            "price":"52,40"
+            "price":"52,40",
+            "bestSeller":"false"
         },
         {
             "id":"002",
@@ -22,7 +23,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"29,90",
-            "price":"23,90"
+            "price":"23,90",
+            "bestSeller":"false"
         },
         {
             "id":"003",
@@ -34,7 +36,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"45,00",
-            "price":"29,90"
+            "price":"29,90",
+            "bestSeller":"false"
         },
         {
             "id":"004",
@@ -46,7 +49,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"19,90",
-            "price":"15,90"
+            "price":"15,90",
+            "bestSeller":"false"
         },
         {
             "id":"005",
@@ -58,7 +62,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"39,90",
-            "price":"31,90"
+            "price":"31,90",
+            "bestSeller":"false"
         },
         {
             "id":"006",
@@ -70,7 +75,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"9,90",
-            "price":"7,90"
+            "price":"7,90",
+            "bestSeller":"true"
         },
         {
             "id":"007",
@@ -82,7 +88,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"39,90",
-            "price":"31,90"
+            "price":"31,90",
+            "bestSeller":"false"
         },
         {
             "id":"008",
@@ -94,7 +101,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"29,90",
-            "price":"23,90"
+            "price":"23,90",
+            "bestSeller":"false"
         },
         {
             "id":"009",
@@ -106,7 +114,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"15,00",
-            "price":"12,00"
+            "price":"12,00",
+            "bestSeller":"true"
         },
         {
             "id":"010",
@@ -118,7 +127,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"30,00",
-            "price":"24,00"
+            "price":"24,00",
+            "bestSeller":"false"
         },
         {
             "id":"011",
@@ -130,7 +140,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"29,90",
-            "price":"23,90"
+            "price":"23,90",
+            "bestSeller":"false"
         },
         {
             "id":"012",
@@ -142,7 +153,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"47,00",
-            "price":"37,60"
+            "price":"37,60",
+            "bestSeller":"false"
         },
         {
             "id":"013",
@@ -154,7 +166,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"49,90",
-            "price":"39,90"
+            "price":"39,90",
+            "bestSeller":"true"
         },
         {
             "id":"014",
@@ -166,7 +179,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"25,00",
-            "price":"20,00"
+            "price":"20,00",
+            "bestSeller":"false"
         },
         {
             "id":"015",
@@ -178,7 +192,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"41,90",
-            "price":"38,50"
+            "price":"38,50",
+            "bestSeller":"true"
         },
         {
             "id":"016",
@@ -190,7 +205,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"21,90",
-            "price":"16,90"
+            "price":"16,90",
+            "bestSeller":"false"
         },
         {
             "id":"017",
@@ -202,7 +218,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"73,90",
-            "price":"69,90"
+            "price":"69,90",
+            "bestSeller":"true"
         },
         {
             "id":"018",
@@ -214,7 +231,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"60,00",
-            "price":"56,00"
+            "price":"56,00",
+            "bestSeller":"false"
         },
         {
             "id":"019",
@@ -226,7 +244,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"45,90",
-            "price":"39,90"
+            "price":"39,90",
+            "bestSeller":"false"
         },
         {
             "id":"020",
@@ -238,7 +257,8 @@
             "language":"Português",
             "imgPath":"",
             "originalPrice":"69,00",
-            "price":"65,00"
+            "price":"65,00",
+            "bestSeller":"false"
         }
     ]
 }
