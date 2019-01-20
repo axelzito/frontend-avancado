@@ -1,6 +1,24 @@
-# ECommerce
+# ECommerce - Livraria
+
+Projeto da matéria Frontend Avançado da [Especialização Fullstack Web-Mobile - Universidade Federal de Goiás](http://inf.ufg.br/espweb-mob)
+
+Alunos:
+
+* Axel Miguez
+* Ítalo Tavares
+* Thiago Pereira
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
+
+## Download do Projeto e Instalação
+
+No terminal, faça o clone do projeto
+
+`git clone git@github.com:axelzito/frontend-avancado.git`
+
+Logo, instale as dependencias
+
+`npm install`
 
 ## Development server
 
