@@ -22,6 +22,7 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
+    "@ngu/carousel": "^1.5.5",
     "@types/hammerjs": "^2.0.36",
     "angular2-carousel": "^1.0.16",
     "angular2-useful-swiper": "^5.0.1",

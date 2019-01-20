@@ -21,6 +21,8 @@ import { HeaderComponent } from './header/header.component';
 import { ProductComponent } from './product/product.component';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
+import { NguCarouselModule } from '@ngu/carousel';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { CartComponent } from './cart/cart.component';
     MatCardModule,
     MatDividerModule,
     MatListModule,
+    FormsModule,
+    NguCarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
