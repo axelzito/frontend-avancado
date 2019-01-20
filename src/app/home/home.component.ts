@@ -25,10 +25,11 @@ import { NguCarouselConfig } from '@ngu/carousel';
 })
 export class HomeComponent implements AfterViewInit {
   imgags = [
-    'assets/bg.jpg',
-    'assets/car.png',
-    'assets/canberra.jpg',
-    'assets/holi.jpg'
+    'data/001.jpg',
+    'data/002.png',
+    'data/003.png',
+    'data/004.png',
+    'data/005.png'
   ];
   public carouselTileItems: Array<any> = [0, 1, 2, 3, 4, 5];
   public carouselTiles = {
