@@ -18,6 +18,7 @@ import {
   MatCardModule,
   MatDividerModule,
   MatListModule,
+  MatTableModule,
 } from '@angular/material';
 
 @NgModule({
@@ -41,7 +42,8 @@ import {
     MatListModule,
     FormsModule,
     NguCarouselModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
   ],
   providers: [StorageService],
   bootstrap: [AppComponent]
