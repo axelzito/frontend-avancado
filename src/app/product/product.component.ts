@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { StorageService } from '../storage.service';
 import { IStorage } from '../storage';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-product',
@@ -18,11 +20,12 @@ export class ProductComponent implements OnInit {
   public imgPath;
   public originalPrice;
   public price;
-  public id = 5;
+  public id;
 
-  constructor(private _storageService: StorageService) { }
+  constructor(private _storageService: StorageService, private _route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.id = parseInt(this._route.snapshot.paramMap.get('id'));
     this._storageService.getStorage().subscribe(data => {
       for(var i = 0; i < data.length; i++) {
         if(data[i].id == this.id){

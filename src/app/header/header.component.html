@@ -3,7 +3,7 @@
     <div fxFlex="15"></div>
     <div fxFlex="70">
       <div fxFlex="20" class="center">
-        <a><span class="logo">Livraria</span></a>
+        <button mat-flat-button color="primary" routerLink="/"><span class="logo">Livraria</span></button>
       </div>
       <div fxFlex="60" class="center">
         <form>
@@ -14,7 +14,7 @@
         </form>
       </div>
       <div fxFlex="20" class="center">
-        <button mat-icon-button class="cart-icon">
+        <button mat-icon-button class="cart-icon" routerLink="/cart">
           <mat-icon class="cart-icon">shopping_cart</mat-icon>
         </button>
       </div>
@@ -31,8 +31,12 @@
         <span> Categorias</span>
       </button>
       <mat-menu #menu>
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
+        <button mat-menu-item>Mais Vendidos</button>
+        <button mat-menu-item>Romance</button>
+        <button mat-menu-item>Fantasia</button>
+        <button mat-menu-item>Autoajuda</button>
+        <button mat-menu-item>Administração</button>
+        <button mat-menu-item>Todos os Livros</button>
       </mat-menu>
     </div>
     <div fxFlex="20"></div>
