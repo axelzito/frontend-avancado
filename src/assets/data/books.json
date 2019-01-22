@@ -7,7 +7,7 @@
         "theme":"Dicionários",
         "year":"2014",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/001.jpg",
         "originalPrice":"65,50",
         "price":"52,40",
         "bestSeller":"false"
@@ -20,7 +20,7 @@
         "theme":"Autoajuda",
         "year":"2016",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/002.jpg",
         "originalPrice":"29,90",
         "price":"23,90",
         "bestSeller":"false"
@@ -33,7 +33,7 @@
         "theme":"Paradidáticos",
         "year":"2005",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/003.jpg",
         "originalPrice":"45,00",
         "price":"29,90",
         "bestSeller":"false"
@@ -46,7 +46,7 @@
         "theme":"Administração",
         "year":"2018",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/004.jpg",
         "originalPrice":"19,90",
         "price":"15,90",
         "bestSeller":"false"
@@ -59,7 +59,7 @@
         "theme":"Infantil",
         "year":"1973",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/005.jpg",
         "originalPrice":"39,90",
         "price":"31,90",
         "bestSeller":"false"
@@ -72,7 +72,7 @@
         "theme":"Infantil",
         "year":"2015",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/006.jpg",
         "originalPrice":"9,90",
         "price":"7,90",
         "bestSeller":"true"
@@ -85,7 +85,7 @@
         "theme":"Administração",
         "year":"2015",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/007.jpg",
         "originalPrice":"39,90",
         "price":"31,90",
         "bestSeller":"false"
@@ -98,7 +98,7 @@
         "theme":"Administração",
         "year":"2016",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/008.jpg",
         "originalPrice":"29,90",
         "price":"23,90",
         "bestSeller":"false"
@@ -111,7 +111,7 @@
         "theme":"Espiritualidade",
         "year":"2008",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/009.jpg",
         "originalPrice":"15,00",
         "price":"12,00",
         "bestSeller":"true"
@@ -124,7 +124,7 @@
         "theme":"Autoajuda",
         "year":"2009",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/010.jpg",
         "originalPrice":"30,00",
         "price":"24,00",
         "bestSeller":"false"
@@ -137,7 +137,7 @@
         "theme":"Autoajuda",
         "year":"2007",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/011.jpg",
         "originalPrice":"29,90",
         "price":"23,90",
         "bestSeller":"false"
@@ -150,7 +150,7 @@
         "theme":"Paradidáticos",
         "year":"2011",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/012.jpg",
         "originalPrice":"47,00",
         "price":"37,60",
         "bestSeller":"false"
@@ -163,7 +163,7 @@
         "theme":"Astronomia",
         "year":"2015",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/013.jpg",
         "originalPrice":"49,90",
         "price":"39,90",
         "bestSeller":"true"
@@ -176,7 +176,7 @@
         "theme":"Romance",
         "year":"1998",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/014.jpg",
         "originalPrice":"25,00",
         "price":"20,00",
         "bestSeller":"false"
@@ -189,7 +189,7 @@
         "theme":"Fantasia",
         "year":"2000",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/015.jpg",
         "originalPrice":"41,90",
         "price":"38,50",
         "bestSeller":"true"
@@ -202,7 +202,7 @@
         "theme":"Teatro",
         "year":"1997",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/016.jpg",
         "originalPrice":"21,90",
         "price":"16,90",
         "bestSeller":"false"
@@ -215,7 +215,7 @@
         "theme":"Fantasia",
         "year":"2018",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/017.jpg",
         "originalPrice":"73,90",
         "price":"69,90",
         "bestSeller":"true"
@@ -228,7 +228,7 @@
         "theme":"Romance",
         "year":"2012",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/018.jpg",
         "originalPrice":"60,00",
         "price":"56,00",
         "bestSeller":"false"
@@ -241,7 +241,7 @@
         "theme":"Romance",
         "year":"2012",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/019.jpg",
         "originalPrice":"45,90",
         "price":"39,90",
         "bestSeller":"false"
@@ -254,10 +254,10 @@
         "theme":"Fantasia",
         "year":"2002",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/020.jpg",
         "originalPrice":"69,00",
         "price":"65,00",
-        "bestSeller":"false"
+        "bestSeller":"true"
     },
     {
         "id":"21",
@@ -267,7 +267,7 @@
         "theme":"Fantasia",
         "year":"2009",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/021.jpg",
         "originalPrice":"59,90",
         "price":"47,90",
         "bestSeller":"false"
@@ -280,7 +280,7 @@
         "theme":"Administração",
         "year":"1989",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/022.jpg",
         "originalPrice":"29,90",
         "price":"23,90",
         "bestSeller":"false"
@@ -293,7 +293,7 @@
         "theme":"Romance",
         "year":"1989",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/023.jpg",
         "originalPrice":"98,00",
         "price":"78,40",
         "bestSeller":"false"
@@ -306,7 +306,7 @@
         "theme":"Economia",
         "year":"2016",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/024.jpg",
         "originalPrice":"52,00",
         "price":"41,60",
         "bestSeller":"false"
@@ -319,10 +319,10 @@
         "theme":"Romance",
         "year":"2010",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/025.jpg",
         "originalPrice":"54,00",
         "price":"43,20",
-        "bestSeller":"false"
+        "bestSeller":"true"
     },
     {
         "id":"26",
@@ -332,7 +332,7 @@
         "theme":"Didático",
         "year":"2015",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/026.jpg",
         "originalPrice":"49,00",
         "price":"39,20",
         "bestSeller":"false"
@@ -345,7 +345,7 @@
         "theme":"Geografia",
         "year":"2018",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/027.jpg",
         "originalPrice":"70,00",
         "price":"56,00",
         "bestSeller":"false"
@@ -358,7 +358,7 @@
         "theme":"Literatura",
         "year":"2012",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/028.jpg",
         "originalPrice":"53,00",
         "price":"42,40",
         "bestSeller":"false"
@@ -371,7 +371,7 @@
         "theme":"Educação",
         "year":"2012",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/029.jpg",
         "originalPrice":"29,90",
         "price":"23,90",
         "bestSeller":"false"
@@ -384,7 +384,7 @@
         "theme":"Ficção Científica",
         "year":"1977",
         "language":"Português",
-        "imgPath":"",
+        "imgPath":"/assets/data/img/030.jpg",
         "originalPrice":"46,50",
         "price":"37,00",
         "bestSeller":"false"

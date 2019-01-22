@@ -2,14 +2,14 @@
 <div fxFlex="60" fxLayout="column" fxLayoutAlign="center stretch">
   <div>
     <div fxFlex="50" fxLayout="row" fxLayoutAlign="center center" class="div-image">
-        <img class="product-image" src="https://statics.livrariacultura.net.br/products/capas_lg/837/46055837.jpg">
+        <img class="product-image" [src]="imgPath">
     </div>
     <div fxFlex="50" fxLayout="column" fxLayoutAlign="center stretch">
       <div class="div-product-title">
-        <span class="product-title">{{title}}</span>
+        <span class="product-title">{{title | titlecase}}</span>
         <br><br>
         <span class="mini">Autor:</span>
-        <span class="author">&nbsp;{{author}}</span>
+        <span class="author">&nbsp;{{author | uppercase}}</span>
       </div>
       <mat-divider></mat-divider>
       <div fxLayout="row" fxLayoutAlign="center center" class="div-product-title">
@@ -33,28 +33,43 @@
     </div>
   </div>
   <mat-divider></mat-divider>
-  <div class="div-product-details">
-    <span class="product-details-title">Detalhes do Produto</span>
-    <mat-list>
-      <mat-list-item>
-        <span class="product-details-cat">Autor:&nbsp;</span><span class="product-details">{{author}}</span>
-      </mat-list-item>
-      <mat-list-item>
-        <span class="product-details-cat">Editora:&nbsp;</span><span class="product-details">{{publisher}}</span>
-      </mat-list-item>
-      <mat-list-item>
-        <span class="product-details-cat">Assunto:&nbsp;</span><span class="product-details">{{theme}}</span>
-      </mat-list-item>
-      <mat-list-item>
-        <span class="product-details-cat">Ano:&nbsp;</span><span class="product-details">{{year}}</span>
-      </mat-list-item>
-      <mat-list-item>
-        <span class="product-details-cat">Idioma:&nbsp;</span><span class="product-details">{{language}}</span>
-      </mat-list-item>
-    </mat-list>
+  <div fxLayout="column" fxLayoutAlign="center stretch">
+    <div class="div-product-details">
+        <span class="product-details-title">Detalhes do Produto</span>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <div fxFlex="20">
+        <mat-list>
+          <mat-list-item>
+            <span class="product-details-cat">Autor:&nbsp;</span><span class="product-details">{{author | titlecase}}</span>
+          </mat-list-item>
+          <mat-list-item>
+            <span class="product-details-cat">Editora:&nbsp;</span><span class="product-details">{{publisher | titlecase}}</span>
+          </mat-list-item>
+        </mat-list>
+      </div>
+      <div fxFlex="20">
+        <mat-list>
+          <mat-list-item>
+            <span class="product-details-cat">Assunto:&nbsp;</span><span class="product-details">{{theme | titlecase}}</span>
+          </mat-list-item>
+          <mat-list-item>
+            <span class="product-details-cat">Ano:&nbsp;</span><span class="product-details">{{year}}</span>
+          </mat-list-item>
+        </mat-list>
+      </div>
+      <div fxFlex="60">
+        <mat-list>
+          <mat-list-item>
+            <span class="product-details-cat">Idioma:&nbsp;</span><span class="product-details">{{language | titlecase}}</span>
+          </mat-list-item>
+          <mat-list-item>
+              <span class="product-details-cat"></span><span class="product-details"></span>
+            </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
   </div>
-  <ul *ngFor="let product of products">
-    <li>{{product.title}}</li>
-  </ul>
+  <mat-divider></mat-divider>
 </div>
 <div fxFlex="20"></div>
