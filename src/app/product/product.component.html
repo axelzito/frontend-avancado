@@ -6,21 +6,21 @@
     </div>
     <div fxFlex="50" fxLayout="column" fxLayoutAlign="center stretch">
       <div class="div-product-title">
-        <span class="product-title">CRONICAS DE GELO E FOGO, AS, V.1 - A GUERRA DOS TRONOS - EDIÇAO COMEMORATIVA</span>
+        <span class="product-title">{{title}}</span>
         <br><br>
         <span class="mini">Autor:</span>
-        <span class="author">&nbsp;MARTIN, GEORGE R .R.</span>
+        <span class="author">&nbsp;{{author}}</span>
       </div>
       <mat-divider></mat-divider>
       <div fxLayout="row" fxLayoutAlign="center center" class="div-product-title">
         <div fxLayout="column" fxLayoutAlign="center stretch" class="div-product-price">
           <div>
             <span class="mini">de:&nbsp;</span>
-            <span class="original-price">R$&nbsp;149,90</span>
+            <span class="original-price">R$&nbsp;{{originalPrice}}</span>
           </div>
           <div>
             <span class="mini">por:&nbsp;</span>
-            <span class="price">R$&nbsp;129,90</span>
+            <span class="price">R$&nbsp;{{price}}</span>
           </div>
         </div>
         <div fxLayout="column" fxLayoutAlign="center stretch" class="div-product-price">
@@ -37,21 +37,24 @@
     <span class="product-details-title">Detalhes do Produto</span>
     <mat-list>
       <mat-list-item>
-        <span class="product-details-cat">Autor:&nbsp;</span><span class="product-details">MARTIN, GEORGE R .R.</span>
+        <span class="product-details-cat">Autor:&nbsp;</span><span class="product-details">{{author}}</span>
       </mat-list-item>
       <mat-list-item>
-        <span class="product-details-cat">Editora:&nbsp;</span><span class="product-details">LEYA CASA DA PALAVRA</span>
+        <span class="product-details-cat">Editora:&nbsp;</span><span class="product-details">{{publisher}}</span>
       </mat-list-item>
       <mat-list-item>
-        <span class="product-details-cat">Assunto:&nbsp;</span><span class="product-details">FANTASIA</span>
+        <span class="product-details-cat">Assunto:&nbsp;</span><span class="product-details">{{theme}}</span>
       </mat-list-item>
       <mat-list-item>
-        <span class="product-details-cat">Ano:&nbsp;</span><span class="product-details">2015</span>
+        <span class="product-details-cat">Ano:&nbsp;</span><span class="product-details">{{year}}</span>
       </mat-list-item>
       <mat-list-item>
-        <span class="product-details-cat">Idioma:&nbsp;</span><span class="product-details">PORTUGUÊS</span>
+        <span class="product-details-cat">Idioma:&nbsp;</span><span class="product-details">{{language}}</span>
       </mat-list-item>
     </mat-list>
   </div>
+  <ul *ngFor="let product of products">
+    <li>{{product.title}}</li>
+  </ul>
 </div>
 <div fxFlex="20"></div>

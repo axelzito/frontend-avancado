@@ -23,6 +23,8 @@ import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { NguCarouselModule } from '@ngu/carousel';
 import { FormsModule } from '@angular/forms';
+import { StorageService } from './storage.service';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -47,9 +49,10 @@ import { FormsModule } from '@angular/forms';
     MatDividerModule,
     MatListModule,
     FormsModule,
-    NguCarouselModule
+    NguCarouselModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
