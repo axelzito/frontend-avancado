@@ -1,7 +1,34 @@
-<mat-grid-list class="gridList" cols="5" rowHeight="2:3" gutterSize="30px">
+<mat-grid-list class="gridList" cols="5" rowHeight="2:5" gutterSize="30px">
   <mat-grid-tile *ngFor="let tile of tiles" colspan="1" rowspan="1" class="tile">
-    <a (click)="navigateToProduct(tile.id)">
-      <img src="{{tile.imgPath}}" width="90%" height="90%">
-    </a>
+    <div class="div-tile">
+      <div class="div-tile-img">
+        <a (click)="navigateToProduct(tile.id)">
+          <img src="{{tile.imgPath}}" width="80%" height="80%">
+        </a>
+      </div>
+      <div class="div-tile-info">
+        <div class="div-tile-info-title">
+          <a (click)="navigateToProduct(tile.id)">
+            <span>{{tile.title | titlecase}}</span>
+          </a>
+        </div>
+        <div class="div-tile-info-price">
+          <div>
+              <span class="mini">de:&nbsp;</span>
+              <span class="original-price">R${{tile.originalPrice}}</span>
+            </div>
+            <div>
+              <span class="mini">por:&nbsp;</span>
+              <span class="price">R${{tile.price}}</span>
+            </div>
+        </div>
+        <div class="div-tile-info-button">
+          <button mat-flat-button color="primary">
+            <span>Comprar&nbsp;&nbsp;</span>
+            <mat-icon>shopping_cart</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
   </mat-grid-tile>
 </mat-grid-list>

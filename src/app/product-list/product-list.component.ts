@@ -63,7 +63,9 @@ export class ProductListComponent implements OnInit {
           this.tiles.push({
             title: data[i].title,
             imgPath: data[i].imgPath,
-            id: data[i].id
+            id: data[i].id,
+            originalPrice: data[i].originalPrice,
+            price: data[i].price
           });
         }
       }
@@ -76,7 +78,9 @@ export class ProductListComponent implements OnInit {
         this.tiles.push({
           title: data[i].title,
           imgPath: data[i].imgPath,
-          id: data[i].id
+          id: data[i].id,
+          originalPrice: data[i].originalPrice,
+          price: data[i].price
         });
       }
     });
@@ -89,7 +93,9 @@ export class ProductListComponent implements OnInit {
           this.tiles.push({
             title: data[i].title,
             imgPath: data[i].imgPath,
-            id: data[i].id
+            id: data[i].id,
+            originalPrice: data[i].originalPrice,
+            price: data[i].price
           });
         }
       }
