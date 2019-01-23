@@ -16,7 +16,9 @@ No terminal, faça o clone do projeto
 
 `git clone git@github.com:axelzito/frontend-avancado.git`
 
-Logo, instale as dependencias
+Logo, entre na pasta do projeto e instale as dependencias
+
+`cd frontend-avancado`
 
 `npm install`
 
