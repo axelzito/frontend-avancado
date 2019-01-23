@@ -1,5 +1,3 @@
-<div fxFlex="15"></div>
-<div fxFlex="70">
   <table mat-table [dataSource]="transactions" class="mat-elevation-z8">
     <ng-container matColumnDef="item">
       <th mat-header-cell *matHeaderCellDef> Item </th>
@@ -29,5 +27,4 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
   </table>
-</div>
-<div fxFlex="15"></div>
+  
