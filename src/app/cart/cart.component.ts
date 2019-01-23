@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 export interface Transaction {
   item: string;
-  cost: number;
+  preco: number;
+  quant: number;
+  
 }
 
 @Component({
@@ -11,23 +13,23 @@ export interface Transaction {
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-
-  displayedColumns: string[] = ['item', 'cost'];
+  
+  displayedColumns: string[] = ['item', 'preco', 'quant', 'sub'];
   transactions: Transaction[] = [
-    {item: 'Beach ball', cost: 4},
-    {item: 'Towel', cost: 5},
-    {item: 'Frisbee', cost: 2},
-    {item: 'Sunscreen', cost: 4},
-    {item: 'Cooler', cost: 25},
-    {item: 'Swim suit', cost: 15},
+    {item: 'livro 1', preco: 4, quant: 1},
+    {item: 'livro 2', preco: 5, quant: 2},
+    {item: 'livro 3', preco: 2, quant: 1},
+    {item: 'livro 4', preco: 4, quant: 3},
+    {item: 'livro 5', preco: 25, quant: 1},
+    {item: 'livro 6', preco: 15, quant: 4},
   ];
   constructor() { }
-
+  
   ngOnInit() {
   }
-
-  getTotalCost() {
-    return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
+  
+  getPrecoTotal() {
+    return this.transactions.map(t => t.preco*t.quant).reduce((acc, value) => acc + value, 0);
   }
-
+  
 }
