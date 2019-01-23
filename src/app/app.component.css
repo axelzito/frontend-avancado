@@ -2,3 +2,15 @@
     min-width: 1200px;
     width: 100%;
 }
+
+.page{
+    display: flex;
+}
+
+.main{
+    width: 1200px;
+}
+
+.spacer{
+    flex: 1;
+}
