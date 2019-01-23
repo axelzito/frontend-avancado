@@ -25,19 +25,24 @@
 <mat-toolbar>
   <mat-toolbar-row>
     <div fxFlex="20"></div>
-    <div fxFlex="60">
+    <div fxFlex="10">
       <button mat-button [matMenuTriggerFor]="menu">
         <mat-icon>menu</mat-icon>
         <span> Categorias</span>
       </button>
       <mat-menu #menu>
-        <button mat-menu-item>Mais Vendidos</button>
-        <button mat-menu-item>Romance</button>
-        <button mat-menu-item>Fantasia</button>
-        <button mat-menu-item>Autoajuda</button>
-        <button mat-menu-item>Administração</button>
-        <button mat-menu-item>Todos os Livros</button>
+        <button mat-menu-item (click)="navigateCategory('romance')">Romance</button>
+        <button mat-menu-item (click)="navigateCategory('fantasia')">Fantasia</button>
+        <button mat-menu-item (click)="navigateCategory('autoajuda')">Autoajuda</button>
+        <button mat-menu-item (click)="navigateCategory('administracao')">Administração</button>
+        <button mat-menu-item (click)="navigateCategory('didaticos')">Didáticos</button>
+        <button mat-menu-item (click)="navigateCategory('infantil')">Infantil</button>
+        <button mat-menu-item (click)="navigateCategory('espiritualidade')">Espiritualidade</button>
       </mat-menu>
+    </div>
+    <div fxFlex="50">
+      <button mat-button (click)="navigateCategory('maisvendidos')"><span>Mais Vendidos</span></button>
+      <button mat-button (click)="navigateCategory('todascategorias')"><span>Todas os Livros</span></button>
     </div>
     <div fxFlex="20"></div>
   </mat-toolbar-row>

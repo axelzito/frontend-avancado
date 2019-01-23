@@ -1,0 +1,7 @@
+<mat-grid-list class="gridList" cols="5" rowHeight="2:3" gutterSize="30px">
+  <mat-grid-tile *ngFor="let tile of tiles" colspan="1" rowspan="1" class="tile">
+    <a (click)="navigateToProduct(tile.id)">
+      <img src="{{tile.imgPath}}" width="90%" height="90%">
+    </a>
+  </mat-grid-tile>
+</mat-grid-list>

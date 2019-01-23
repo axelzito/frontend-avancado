@@ -1,12 +1,11 @@
-<div fxFlex="20"></div>
-<div fxFlex="60" fxLayout="column" fxLayoutAlign="center stretch">
+<div fxLayout="column" fxLayoutAlign="center stretch">
   <div>
     <div fxFlex="50" fxLayout="row" fxLayoutAlign="center center" class="div-image">
-        <img class="product-image" [src]="imgPath">
+        <img class="product-image" src="{{imgPath}}">
     </div>
     <div fxFlex="50" fxLayout="column" fxLayoutAlign="center stretch">
       <div class="div-product-title">
-        <span class="product-title">{{title | titlecase}}</span>
+        <span class="product-title">{{title | uppercase}}</span>
         <br><br>
         <span class="mini">Autor:</span>
         <span class="author">&nbsp;{{author | uppercase}}</span>
@@ -72,4 +71,3 @@
   </div>
   <mat-divider></mat-divider>
 </div>
-<div fxFlex="20"></div>

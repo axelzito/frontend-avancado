@@ -3,11 +3,11 @@ export interface IStorage {
     title: string,
     author: string,
     publisher: string,
-    theme: string,
+    category: string,
     year: number,
     language: string,
     imgPath: string,
     originalPrice: number,
     price: number,
-    bestSeller: boolean
+    bestSeller: string
 }

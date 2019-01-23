@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { StorageService } from '../storage.service';
 import { IStorage } from '../storage';
-import { from } from 'rxjs';
 
 @Component({
   selector: 'app-product',
@@ -14,7 +13,7 @@ export class ProductComponent implements OnInit {
   public title;
   public author;
   public publisher;
-  public theme;
+  public category;
   public year;
   public language;
   public imgPath;
@@ -35,7 +34,7 @@ export class ProductComponent implements OnInit {
       this.title = this._product.title;
       this.author = this._product.author;
       this.publisher = this._product.publisher;
-      this.theme = this._product.theme;
+      this.category = this._product.category;
       this.year = this._product.year;
       this.language = this._product.language;
       this.imgPath = this._product.imgPath;

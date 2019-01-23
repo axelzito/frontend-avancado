@@ -1,0 +1,8 @@
+.gridList{
+    padding-top: 50px;
+}
+
+.tile{
+    border: 1px solid lightgrey;
+    text-align: center;
+}
