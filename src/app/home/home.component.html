@@ -1,59 +1,27 @@
-<div fxFlex="20"></div>
-<div fxFlex="60">
+<h3>Mais Vendidos</h3>
 
-  <h3>Mais Vendidos</h3>
-  <!--<ngu-carousel #myCarousel [inputs]="carouselTile" [dataSource]="carouselTileItems">-->
-    <!--<ngu-tile *nguCarouselDef="let item; let i = index">-->
+<div id="container">
+  <div ng2-carouselamos
+    class="slides-wrapper"
+    [items]="items"
+    [width]="900"
+    [$prev]="prev"
+    [$next]="next"
+    [$item]="item" >
+  </div>
 
-      <!--<ngu-carousel #myCarousel [inputs]="carouselTile" (carouselLoad)="carouselTileLoad(i)" [dataSource]="carouselTiles[i]">-->
-        <!--<ngu-tile *nguCarouselDef="let item; let j = index">-->
-          <!--<div class="tile" [style.background]="'url(' + item + ')'" style="min-height: 200px">-->
-            <!--<h1>{{j}}</h1>-->
-          <!--</div>-->
-        <!--</ngu-tile>-->
-        <!--<button NguCarouselPrev class="leftRs" [style.opacity]="myCarousel.isFirst ? 0.5:1">&lt;</button>-->
-        <!--<button NguCarouselNext class="rightRs" [style.opacity]="myCarousel.isLast ? 0.5:1">&gt;</button>-->
-        <!--<ul class="myPoint" NguCarouselPoint>-->
-          <!--<li *ngFor="let j of myCarousel.pointNumbers; let j = index" [class.active]="j==myCarousel.activePoint" (click)="myCarousel.moveTo(j)"-->
-              <!--[style.background]="'url(' + carouselTileItems[j] + ')'"></li>-->
-        <!--</ul>-->
-      <!--</ngu-carousel>-->
+  <ng-template #prev>
+    <img src="assets/left-arrow.svg" id="left"/>
+  </ng-template>
+  <ng-template #next>
+    <img src="assets/right-arrow.svg" id="right"/>
+  </ng-template>
+  <ng-template #item let-item let-i="index">
 
-    <!--</ngu-tile>-->
-    <!--&lt;!&ndash;<button NguCarouselPrev class="leftRs" [style.opacity]="myCarousel.isFirst ? 0.5:1">&lt;</button>&ndash;&gt;-->
-    <!--&lt;!&ndash;<button NguCarouselNext class="rightRs" [style.opacity]="myCarousel.isLast ? 0.5:1">&gt;</button>&ndash;&gt;-->
-    <!--&lt;!&ndash;<ul class="myPoint" NguCarouselPoint>&ndash;&gt;-->
-      <!--&lt;!&ndash;<li *ngFor="let i of myCarousel.pointNumbers; let i = index" [class.active]="i==myCarousel.activePoint" (click)="myCarousel.moveTo(i)"&ndash;&gt;-->
-          <!--&lt;!&ndash;[style.background]="'url(' + carouselTileItems[i] + ')'"></li>&ndash;&gt;-->
-    <!--&lt;!&ndash;</ul>&ndash;&gt;-->
-  <!--</ngu-carousel>-->
-
-  <div id="container">
-    <div
-      ng2-carouselamos
-      class="slides-wrapper"
-      [items]="items"
-      [width]="900"
-      [$prev]="prev"
-      [$next]="next"
-      [$item]="item"
-    >
+    <div class="items">
+      <img src="{{ item.name }}">
     </div>
 
+  </ng-template>
 
-    <ng-template #prev>
-      <img src="assets/left-arrow.svg" id="left" />
-    </ng-template>
-    <ng-template #next>
-      <img src="assets/right-arrow.svg" id="right" />
-    </ng-template>
-    <ng-template #item let-item let-i="index">
-
-      <div class="items">
-        <img src="{{ item.name }}">
-      </div>
-
-    </ng-template>
-  
 </div>
-<div fxFlex="20"></div>
