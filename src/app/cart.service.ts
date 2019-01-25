@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { IStorage } from './storage';
 import { StorageService } from './storage.service';
 
-export interface Product{
+export interface Product {
   iStorage: IStorage;
   quant: number;
 }
@@ -11,39 +11,36 @@ export interface Product{
   providedIn: 'root'
 })
 export class CartService {
-  
-  productList : Product[];
-  books : IStorage[];
-  product: Product;
-  
+
+  books: IStorage[];
+  public productList = [];
+
   constructor(private _storageService: StorageService) {
     this._storageService.getStorage().subscribe(data => {
       this.books = data;
       this.books.forEach(book => {
-        this.product.iStorage = book;
-        this.product.quant = 0;
-        this.productList.push(this.product);
+        this.productList.push({ iStorage: book, quant: 0 });
       });
     });
   }
 
-  addProduct(id: number){
+  addProduct(id: number) {
     this.productList.forEach(p => {
-      if(p.iStorage.id == id){
+      if (p.iStorage.id == id) {
         p.quant++;
       }
     });
   }
 
-  removeProduct(id:number){
+  removeProduct(id: number) {
     this.productList.forEach(p => {
-      if(p.iStorage.id == id && p.quant > 0){
+      if (p.iStorage.id && p.quant > 0) {
         p.quant--;
       }
     });
   }
 
-  getProductList():Product[]{
+  getProductList(): Product[] {
     return this.productList;
   }
 
