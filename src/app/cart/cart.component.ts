@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 
 export interface Transaction {
+  id : number;
   item: string;
   preco: number;
   quant: number;
-  
 }
 
 @Component({
@@ -16,14 +16,7 @@ export interface Transaction {
 export class CartComponent implements OnInit {
   
   displayedColumns: string[] = ['item', 'preco', 'quant', 'sub'];
-  transactions: Transaction[] = [
-    {item: 'livro 1', preco: 4, quant: 1},
-    {item: 'livro 2', preco: 5, quant: 2},
-    {item: 'livro 3', preco: 2, quant: 1},
-    {item: 'livro 4', preco: 4, quant: 3},
-    {item: 'livro 5', preco: 25, quant: 1},
-    {item: 'livro 6', preco: 15, quant: 4},
-  ];
+  transactions: Transaction[];
   constructor(private _cartService: CartService) { }
   
   ngOnInit() {
@@ -33,8 +26,30 @@ export class CartComponent implements OnInit {
     return this.transactions.map(t => t.preco*t.quant).reduce((acc, value) => acc + value, 0);
   }
 
+  add(id:number){
+    this._cartService.addProduct(id);
+    this.setTransaction();
+  }
+
+  remove(id:number){
+    this._cartService.removeProduct(id);
+    this.setTransaction();
+  }
+
   addLivro(){
     this._cartService.addProduct(10);
+    this.setTransaction();
+  }
+
+  setTransaction(){
+    this.transactions = [];
+    let list = this._cartService.getProductList();
+    list.forEach(element => {
+      if (element.quant > 0) {
+        let p: string = String(element.iStorage.price);
+        this.transactions.push({id: element.iStorage.id, item: element.iStorage.title, preco: parseFloat(p), quant: element.quant})  
+      }
+    });
   }
   
 }
