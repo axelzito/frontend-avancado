@@ -20,14 +20,17 @@ import {
   MatDividerModule,
   MatListModule,
   MatTableModule,
+  MatDialogModule,
 } from '@angular/material';
 import { SearchPipe } from './search.pipe';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     routingComponents,
     SearchPipe,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,11 @@ import { SearchPipe } from './search.pipe';
     NguCarouselModule,
     HttpClientModule,
     MatTableModule,
-    Ng2CarouselamosModule
+    Ng2CarouselamosModule,
+    MatDialogModule
+  ],
+  entryComponents: [
+    ConfirmDialogComponent
   ],
   exports: [SearchPipe],
   providers: [StorageService],

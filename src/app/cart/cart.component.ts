@@ -55,5 +55,9 @@ export class CartComponent implements OnInit {
       }
     });
   }
+
+  efetuaCompra(){
+    
+  }
   
 }
