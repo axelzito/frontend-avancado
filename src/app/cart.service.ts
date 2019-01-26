@@ -11,10 +11,10 @@ export interface Product {
   providedIn: 'root'
 })
 export class CartService {
-
+  
   books: IStorage[];
   public productList = [];
-
+  
   constructor(private _storageService: StorageService) {
     this._storageService.getStorage().subscribe(data => {
       this.books = data;
@@ -23,7 +23,7 @@ export class CartService {
       });
     });
   }
-
+  
   addProduct(id: number) {
     this.productList.forEach(p => {
       if (p.iStorage.id == id) {
@@ -31,7 +31,7 @@ export class CartService {
       }
     });
   }
-
+  
   removeProduct(id: number) {
     this.productList.forEach(p => {
       if (p.iStorage.id == id && p.quant > 0) {
@@ -39,10 +39,14 @@ export class CartService {
       }
     });
   }
-
+  
   getProductList(): Product[] {
     return this.productList;
   }
-
-
+  
+  clearList() {
+    this.productList.forEach(p => {
+      p.quant = 0;
+    });
+  }
 }

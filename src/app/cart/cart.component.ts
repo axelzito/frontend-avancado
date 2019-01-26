@@ -22,7 +22,7 @@ export class CartComponent implements OnInit {
   transactions: Transaction[];
   constructor(public dialog: MatDialog, private _cartService: CartService) {
     this.setTransaction();
-   }
+  }
   
   ngOnInit() {
   }
@@ -30,17 +30,17 @@ export class CartComponent implements OnInit {
   getPrecoTotal() {
     return this.transactions.map(t => t.preco*t.quant).reduce((acc, value) => acc + value, 0);
   }
-
+  
   add(id:number){
     this._cartService.addProduct(id);
     this.setTransaction();
   }
-
+  
   remove(id:number){
     this._cartService.removeProduct(id);
     this.setTransaction();
   }
-
+  
   setTransaction(){
     this.transactions = [];
     let list = this._cartService.getProductList();
@@ -51,15 +51,15 @@ export class CartComponent implements OnInit {
       }
     });
   }
-
+  
   efetuaCompra(){
     const dialogRef = this.dialog.open(ConfirmDialogComponent);
-
+    
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.transactions = [];
+        this._cartService.clearList();
+        this.setTransaction();
       }
     });
   }
-  
 }
