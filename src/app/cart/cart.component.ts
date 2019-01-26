@@ -41,12 +41,6 @@ export class CartComponent implements OnInit {
     this.setTransaction();
   }
 
-  addLivro(){
-    this._cartService.addProduct(10);
-    this._cartService.addProduct(12);
-    this.setTransaction();
-  }
-
   setTransaction(){
     this.transactions = [];
     let list = this._cartService.getProductList();
@@ -65,7 +59,6 @@ export class CartComponent implements OnInit {
       if (result) {
         this.transactions = [];
       }
-      console.log(`Dialog result: ${result}`);
     });
   }
   
