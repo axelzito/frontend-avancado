@@ -21,11 +21,13 @@ import {
   MatListModule,
   MatTableModule,
 } from '@angular/material';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,7 @@ import {
     MatTableModule,
     Ng2CarouselamosModule
   ],
+  exports: [SearchPipe],
   providers: [StorageService],
   bootstrap: [AppComponent]
 })

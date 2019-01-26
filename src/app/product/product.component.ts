@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { StorageService } from '../storage.service';
 import { IStorage } from '../storage';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-product',
@@ -10,18 +11,18 @@ import { IStorage } from '../storage';
 })
 export class ProductComponent implements OnInit {
   private _product: IStorage;
-  public title;
-  public author;
-  public publisher;
-  public category;
-  public year;
-  public language;
-  public imgPath;
-  public originalPrice;
-  public price;
-  public id;
+  public title: string;
+  public author: string;
+  public publisher: string;
+  public category: string;
+  public year: number;
+  public language: string;
+  public imgPath: string;
+  public originalPrice: number;
+  public price: number;
+  public id: number;
 
-  constructor(private _storageService: StorageService, private _route: ActivatedRoute) { }
+  constructor(private _storageService: StorageService, private _route: ActivatedRoute, private _cartService: CartService, private _router: Router) { }
 
   ngOnInit() {
     this.id = parseInt(this._route.snapshot.paramMap.get('id'));
@@ -41,6 +42,11 @@ export class ProductComponent implements OnInit {
       this.originalPrice = this._product.originalPrice;
       this.price = this._product.price;
     });
+  }
+
+  addCart(){
+    this._cartService.addProduct(this.id);
+    this._router.navigate(['/cart']);
   }
  
 }
