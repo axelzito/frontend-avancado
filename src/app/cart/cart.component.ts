@@ -3,6 +3,7 @@ import { CartService } from '../cart.service';
 
 export interface Transaction {
   id : number;
+  imgPath: string;
   item: string;
   preco: number;
   quant: number;
@@ -17,7 +18,9 @@ export class CartComponent implements OnInit {
   
   displayedColumns: string[] = ['item', 'preco', 'quant', 'sub'];
   transactions: Transaction[];
-  constructor(private _cartService: CartService) { }
+  constructor(private _cartService: CartService) {
+    this.setTransaction();
+   }
   
   ngOnInit() {
   }
@@ -38,6 +41,7 @@ export class CartComponent implements OnInit {
 
   addLivro(){
     this._cartService.addProduct(10);
+    this._cartService.addProduct(12);
     this.setTransaction();
   }
 
@@ -47,7 +51,7 @@ export class CartComponent implements OnInit {
     list.forEach(element => {
       if (element.quant > 0) {
         let p: string = String(element.iStorage.price);
-        this.transactions.push({id: element.iStorage.id, item: element.iStorage.title, preco: parseFloat(p), quant: element.quant})  
+        this.transactions.push({id: element.iStorage.id, imgPath: element.iStorage.imgPath, item: element.iStorage.title, preco: parseFloat(p), quant: element.quant})  
       }
     });
   }

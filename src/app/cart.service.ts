@@ -34,7 +34,7 @@ export class CartService {
 
   removeProduct(id: number) {
     this.productList.forEach(p => {
-      if (p.iStorage.id && p.quant > 0) {
+      if (p.iStorage.id == id && p.quant > 0) {
         p.quant--;
       }
     });
