@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
+import { MatDialog } from '@angular/material';
+import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 export interface Transaction {
   id : number;
@@ -18,7 +20,7 @@ export class CartComponent implements OnInit {
   
   displayedColumns: string[] = ['item', 'preco', 'quant', 'sub'];
   transactions: Transaction[];
-  constructor(private _cartService: CartService) {
+  constructor(public dialog: MatDialog, private _cartService: CartService) {
     this.setTransaction();
    }
   
@@ -57,7 +59,14 @@ export class CartComponent implements OnInit {
   }
 
   efetuaCompra(){
-    
+    const dialogRef = this.dialog.open(ConfirmDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.transactions = [];
+      }
+      console.log(`Dialog result: ${result}`);
+    });
   }
   
 }

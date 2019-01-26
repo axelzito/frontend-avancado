@@ -27,7 +27,7 @@
   <ng-container matColumnDef="sub">
     <th mat-header-cell *matHeaderCellDef> Subtotal </th>
     <td mat-cell *matCellDef="let transaction"> {{transaction.quant*transaction.preco | currency:"R$"}} </td>
-    <td mat-footer-cell *matFooterCellDef> <button mat-raised-button>Efetuar compra</button> </td>
+    <td mat-footer-cell *matFooterCellDef> <button mat-raised-button (click)="efetuaCompra()">Efetuar compra</button> </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
