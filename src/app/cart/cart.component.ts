@@ -20,7 +20,9 @@ export class CartComponent implements OnInit {
   
   displayedColumns: string[] = ['item', 'preco', 'quant', 'sub'];
   transactions: Transaction[];
+  mensagem: string;
   constructor(public dialog: MatDialog, private _cartService: CartService) {
+    this.mensagem = "Nenhum item no carrinho!";
     this.setTransaction();
   }
   
@@ -57,6 +59,7 @@ export class CartComponent implements OnInit {
     
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
+        this.mensagem = "Compra efetuada com sucesso!"
         this._cartService.clearList();
         this.setTransaction();
       }
