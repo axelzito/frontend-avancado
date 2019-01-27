@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 
 export interface Transaction {
-  id : number;
+  id: number;
   imgPath: string;
   item: string;
   preco: number;
@@ -17,49 +17,49 @@ export interface Transaction {
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  
+
   displayedColumns: string[] = ['item', 'preco', 'quant', 'sub'];
   transactions: Transaction[];
   mensagem: string;
   constructor(public dialog: MatDialog, private _cartService: CartService) {
-    this.mensagem = "Nenhum item no carrinho!";
+    this.mensagem = 'Nenhum item no carrinho!';
     this.setTransaction();
   }
-  
+
   ngOnInit() {
   }
-  
+
   getPrecoTotal() {
-    return this.transactions.map(t => t.preco*t.quant).reduce((acc, value) => acc + value, 0);
+    return this.transactions.map(t => t.preco * t.quant).reduce((acc, value) => acc + value, 0);
   }
-  
-  add(id:number){
+
+  add(id: number) {
     this._cartService.addProduct(id);
     this.setTransaction();
   }
-  
-  remove(id:number){
+
+  remove(id: number) {
     this._cartService.removeProduct(id);
     this.setTransaction();
   }
-  
-  setTransaction(){
+
+  setTransaction() {
     this.transactions = [];
-    let list = this._cartService.getProductList();
+    const list = this._cartService.getProductList();
     list.forEach(element => {
       if (element.quant > 0) {
-        let p: string = String(element.iStorage.price);
-        this.transactions.push({id: element.iStorage.id, imgPath: element.iStorage.imgPath, item: element.iStorage.title, preco: parseFloat(p), quant: element.quant})  
+        const p: string = String(element.iStorage.price);
+        this.transactions.push({id: element.iStorage.id, imgPath: element.iStorage.imgPath, item: element.iStorage.title, preco: parseFloat(p), quant: element.quant});
       }
     });
   }
-  
-  efetuaCompra(){
+
+  efetuaCompra() {
     const dialogRef = this.dialog.open(ConfirmDialogComponent);
-    
+
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
-        this.mensagem = "Compra efetuada com sucesso!"
+        this.mensagem = 'Compra efetuada com sucesso!';
         this._cartService.clearList();
         this.setTransaction();
       }
