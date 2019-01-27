@@ -9,22 +9,24 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
   public items = [];
-  public itemsInfantil = [];
+  public itemsRomance = [];
+  public itemsFantasia = [];
   public itemsMaisVendidos = [];
 
   constructor(private _storageService: StorageService, private _router: Router) { }
 
   ngOnInit() {
     this.items = this.listAllProducts();
-    this.itemsInfantil = this.listByCategory('Infantil');
+    this.itemsRomance = this.listByCategory('Romance');
+    this.itemsFantasia = this.listByCategory('Fantasia');
     this.itemsMaisVendidos = this.listBestSellers();
   }
 
-  listByCategory(category:string):any[]{
-    let product = [];
+  listByCategory(category: string): any[] {
+    const product = [];
     this._storageService.getStorage().subscribe(data => {
-      for(var i = 0; i < data.length; i++) {
-        if(data[i].category === category){
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].category === category) {
           product.push({
             title: data[i].title,
             imgPath: data[i].imgPath,
@@ -38,11 +40,11 @@ export class HomeComponent {
     return product;
   }
 
-  listBestSellers():any[]{
-    let product = [];
+  listBestSellers(): any[] {
+    const product = [];
     this._storageService.getStorage().subscribe(data => {
-      for(var i = 0; i < data.length; i++) {
-        if(data[i].bestSeller === 'true'){
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].bestSeller === 'true') {
           product.push({
             title: data[i].title,
             imgPath: data[i].imgPath,
@@ -56,10 +58,10 @@ export class HomeComponent {
     return product;
   }
 
-  listAllProducts():any[]{
-    let product = [];
+  listAllProducts(): any[] {
+    const product = [];
     this._storageService.getStorage().subscribe(data => {
-      for(var i = 0; i < data.length; i++) {
+      for (let i = 0; i < data.length; i++) {
         product.push({
           title: data[i].title,
           imgPath: data[i].imgPath,
@@ -72,8 +74,7 @@ export class HomeComponent {
     return product;
   }
 
-  navigateToProduct(id){
+  navigateToProduct(id) {
     this._router.navigate(['/product', id]);
   }
-  
 }
