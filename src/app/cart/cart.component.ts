@@ -21,8 +21,12 @@ export class CartComponent implements OnInit {
   displayedColumns: string[] = ['item', 'preco', 'quant', 'sub'];
   transactions: Transaction[];
   mensagem: string;
+  flag_vazio: boolean;
+  flag_cheio: boolean;
   constructor(public dialog: MatDialog, private _cartService: CartService) {
     this.mensagem = 'Nenhum item no carrinho!';
+    this.flag_vazio = true;
+    this.flag_cheio = false;
     this.setTransaction();
   }
 
@@ -49,7 +53,8 @@ export class CartComponent implements OnInit {
     list.forEach(element => {
       if (element.quant > 0) {
         const p: string = String(element.iStorage.price);
-        this.transactions.push({id: element.iStorage.id, imgPath: element.iStorage.imgPath, item: element.iStorage.title, preco: parseFloat(p), quant: element.quant});
+        this.transactions.push({id: element.iStorage.id, imgPath: element.iStorage.imgPath, item: element.iStorage.title,
+          preco: parseFloat(p), quant: element.quant});
       }
     });
   }
@@ -60,6 +65,8 @@ export class CartComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.mensagem = 'Compra efetuada com sucesso!';
+        this.flag_cheio =  true;
+        this.flag_vazio = false;
         this._cartService.clearList();
         this.setTransaction();
       }

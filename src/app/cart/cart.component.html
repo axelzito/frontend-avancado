@@ -43,7 +43,10 @@
 
 <div style="margin-top: 200px; text-align: center; font-size: xx-large" *ngIf="getPrecoTotal() == 0">
   <div>{{mensagem}}</div>
-  <div>
-    <mat-icon style="zoom: 4;">shopping_cart</mat-icon>
+  <div *ngIf="flag_vazio == true">
+    <img src="assets/empty-cart.png"/>
+  </div>
+  <div *ngIf="flag_cheio == true">
+    <img src="assets/paid-cart.png"/>
   </div>
 </div>
